@@ -123,13 +123,24 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    background:var(--charcoal);
+    background:
+      linear-gradient(100deg, rgba(26,26,26,0.97) 0%, rgba(26,26,26,0.94) 38%, rgba(26,26,26,0.55) 65%, rgba(26,26,26,0.82) 100%),
+      url('images/rogers-viewing-room.jpg') center 62% / cover no-repeat,
+      var(--charcoal);
     color:var(--off-white);
     padding:96px 0 110px;
     position:relative;
     overflow:hidden;
     border-bottom:1px solid var(--line);
   }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(26,26,26,0.15) 0%, rgba(26,26,26,0.75) 100%);
+    pointer-events:none;
+  }
+  .hero-grid{position:relative; z-index:1;}
   .hero::after{
     content:"";
     position:absolute;
