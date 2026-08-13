@@ -428,21 +428,24 @@
     align-items:center;
     justify-content:center;
     height:76px;
-    padding:0 40px;
+    padding:0 44px;
     border-right:1px solid #e2e2df;
-    font-family:'Oswald',sans-serif;
-    font-size:1.25rem;
-    letter-spacing:0.02em;
-    text-transform:uppercase;
-    color:var(--charcoal);
-    white-space:nowrap;
-    opacity:0.75;
-    transition:opacity 0.2s ease;
+    opacity:0.85;
+    transition:opacity 0.2s ease, filter 0.2s ease;
+    filter:grayscale(0%);
   }
-  .brand-badge:hover{opacity:1; color:var(--teal-dim);}
+  .brand-badge:hover{opacity:1;}
+  .brand-badge img{
+    height:100%;
+    width:auto;
+    max-width:150px;
+    object-fit:contain;
+    display:block;
+  }
 
   @media (max-width:600px){
-    .brand-badge{font-size:1rem; padding:0 24px; height:60px;}
+    .brand-badge{height:56px; padding:0 26px;}
+    .brand-badge img{max-width:110px;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -759,35 +762,35 @@
   </div>
   <div class="marquee">
     <div class="marquee-track">
-      <span class="brand-badge">Red Bull</span>
-      <span class="brand-badge">Budweiser</span>
-      <span class="brand-badge">Bud Light</span>
-      <span class="brand-badge">Desjardins</span>
-      <span class="brand-badge">Dr. Oetker</span>
-      <span class="brand-badge">President's Choice</span>
-      <span class="brand-badge">Mill Street Brewery</span>
-      <span class="brand-badge">Schneiders</span>
-      <span class="brand-badge">Samsung</span>
-      <span class="brand-badge">Jack Link's</span>
-      <span class="brand-badge">RBC</span>
-      <span class="brand-badge">Rogers</span>
-      <span class="brand-badge">Bubly</span>
-      <span class="brand-badge">Heineken</span>
+      <span class="brand-badge"><img src="images/brands/red-bull.svg" alt="Red Bull" loading="lazy"></span>
+      <span class="brand-badge" style="font-family:'Oswald',sans-serif; font-size:1.25rem; text-transform:uppercase; color:var(--charcoal); white-space:nowrap;">Budweiser</span>
+      <span class="brand-badge"><img src="images/brands/bud-light.svg" alt="Bud Light" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/desjardins.svg" alt="Desjardins" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/dr-oetker.png" alt="Dr. Oetker" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/presidents-choice.svg" alt="President's Choice" loading="lazy"></span>
+      <span class="brand-badge" style="font-family:'Oswald',sans-serif; font-size:1.25rem; text-transform:uppercase; color:var(--charcoal); white-space:nowrap;">Mill Street Brewery</span>
+      <span class="brand-badge"><img src="images/brands/schneiders.svg" alt="Schneiders" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/samsung.svg" alt="Samsung" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/jack-links.svg" alt="Jack Link's" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/rbc.svg" alt="RBC" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/rogers.png" alt="Rogers" loading="lazy"></span>
+      <span class="brand-badge" style="font-family:'Oswald',sans-serif; font-size:1.25rem; text-transform:uppercase; color:var(--charcoal); white-space:nowrap;">Bubly</span>
+      <span class="brand-badge"><img src="images/brands/heineken.svg" alt="Heineken" loading="lazy"></span>
       <!-- duplicate for seamless loop -->
-      <span class="brand-badge">Red Bull</span>
-      <span class="brand-badge">Budweiser</span>
-      <span class="brand-badge">Bud Light</span>
-      <span class="brand-badge">Desjardins</span>
-      <span class="brand-badge">Dr. Oetker</span>
-      <span class="brand-badge">President's Choice</span>
-      <span class="brand-badge">Mill Street Brewery</span>
-      <span class="brand-badge">Schneiders</span>
-      <span class="brand-badge">Samsung</span>
-      <span class="brand-badge">Jack Link's</span>
-      <span class="brand-badge">RBC</span>
-      <span class="brand-badge">Rogers</span>
-      <span class="brand-badge">Bubly</span>
-      <span class="brand-badge">Heineken</span>
+      <span class="brand-badge"><img src="images/brands/red-bull.svg" alt="Red Bull" loading="lazy"></span>
+      <span class="brand-badge" style="font-family:'Oswald',sans-serif; font-size:1.25rem; text-transform:uppercase; color:var(--charcoal); white-space:nowrap;">Budweiser</span>
+      <span class="brand-badge"><img src="images/brands/bud-light.svg" alt="Bud Light" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/desjardins.svg" alt="Desjardins" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/dr-oetker.png" alt="Dr. Oetker" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/presidents-choice.svg" alt="President's Choice" loading="lazy"></span>
+      <span class="brand-badge" style="font-family:'Oswald',sans-serif; font-size:1.25rem; text-transform:uppercase; color:var(--charcoal); white-space:nowrap;">Mill Street Brewery</span>
+      <span class="brand-badge"><img src="images/brands/schneiders.svg" alt="Schneiders" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/samsung.svg" alt="Samsung" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/jack-links.svg" alt="Jack Link's" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/rbc.svg" alt="RBC" loading="lazy"></span>
+      <span class="brand-badge"><img src="images/brands/rogers.png" alt="Rogers" loading="lazy"></span>
+      <span class="brand-badge" style="font-family:'Oswald',sans-serif; font-size:1.25rem; text-transform:uppercase; color:var(--charcoal); white-space:nowrap;">Bubly</span>
+      <span class="brand-badge"><img src="images/brands/heineken.svg" alt="Heineken" loading="lazy"></span>
     </div>
   </div>
 </section>
