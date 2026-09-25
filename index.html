@@ -162,6 +162,7 @@
     border-bottom:1px solid transparent;
   }
   .nav-links a:hover{color:var(--teal); border-color:var(--teal);}
+  .nav-ctas{display:flex; gap:12px;}
   .nav-cta{
     font-family:'IBM Plex Mono',monospace;
     font-size:0.78rem;
@@ -176,7 +177,7 @@
 
   @media (max-width:760px){
     .nav-links{display:none;}
-    .nav-cta{display:none;}
+    .nav-ctas{display:none;}
     .nav-menu-btn{display:block;}
   }
 
@@ -701,7 +702,10 @@
       <a href="#work">Our Work</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="nav-cta" href="#contact">Get In Touch</a>
+    <div class="nav-ctas">
+      <a class="nav-cta" href="trailer-rental.html">Trailer Rental</a>
+      <a class="nav-cta" href="#contact">Get In Touch</a>
+    </div>
   </div>
 </nav>
 
