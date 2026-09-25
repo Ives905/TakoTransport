@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Glam Trailer Rental | Tako Transport</title>
+<meta name="description" content="Rent a fully self-contained mobile hair & makeup glam trailer with rooftop lounge deck, backlit styling stations, built-in generator, and climate control — available across Canada.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#1a1a1a">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#1a1a1a;
+    --charcoal-2:#232323;
+    --off-white:#f4f4f2;
+    --teal:#2ee6d6;
+    --teal-dim:#1faea2;
+    --amber:#ffb800;
+    --steel:#9a9d9f;
+    --steel-dark:#5c5f61;
+    --line:rgba(244,244,242,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--off-white);
+    color:var(--charcoal);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1.05;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--teal-dim);
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+  }
+  .eyebrow::before{content:""; width:22px; height:2px; background:var(--teal); display:inline-block;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+
+  /* ---------- TOPBAR ---------- */
+  .topbar{
+    background:var(--charcoal);
+    border-bottom:1px solid var(--line);
+    padding:16px 0;
+  }
+  .topbar .wrap{display:flex; align-items:center; justify-content:space-between;}
+  .topbar-back{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem;
+    color:var(--steel);
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:color 0.2s ease;
+  }
+  .topbar-back:hover{color:var(--teal);}
+  .topbar-title{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem;
+    color:var(--steel-dark);
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      linear-gradient(100deg, rgba(26,26,26,0.90) 0%, rgba(26,26,26,0.82) 38%, rgba(26,26,26,0.45) 68%, rgba(26,26,26,0.78) 100%),
+      url('images/trailer-full-deployed.jpg') center 45% / cover no-repeat,
+      var(--charcoal);
+    color:var(--off-white);
+    padding:96px 0 100px;
+    position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(26,26,26,0.1) 0%, rgba(26,26,26,0.55) 100%);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative; z-index:1;}
+  .hero-inner{max-width:640px;}
+  .hero h1{font-size:clamp(2.2rem, 5vw, 3.4rem); margin:20px 0 20px;}
+  .hero h1 .accent{color:var(--teal);}
+  .hero p.lede{font-size:1.08rem; color:var(--steel); max-width:50ch; margin-bottom:32px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:14px 24px;
+    border:1px solid var(--teal);
+    transition:all 0.2s ease;
+    cursor:pointer;
+  }
+  .btn-solid{background:var(--teal); color:var(--charcoal);}
+  .btn-solid:hover{background:transparent; color:var(--teal);}
+  .btn-ghost{color:var(--off-white); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--teal); color:var(--teal);}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:640px; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem); margin-top:14px;}
+  .section-head p{color:var(--steel-dark); margin-top:14px; font-size:1.02rem;}
+
+  /* ---------- FEATURES ---------- */
+  .features{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:1px;
+    background:#e2e2df;
+    border:1px solid #e2e2df;
+  }
+  .feature-card{background:var(--off-white); padding:28px 22px;}
+  .feature-icon{
+    width:34px; height:34px;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--teal-dim);
+    margin-bottom:16px;
+  }
+  .feature-icon svg{width:100%; height:100%;}
+  .feature-card h3{font-size:0.98rem; margin-bottom:8px; letter-spacing:0.01em;}
+  .feature-card p{color:var(--steel-dark); font-size:0.85rem; line-height:1.45;}
+
+  @media (max-width:980px){
+    .features{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .gallery-item{
+    aspect-ratio:4/3;
+    background:var(--charcoal-2);
+    overflow:hidden;
+    position:relative;
+  }
+  .gallery-item img{width:100%; height:100%; object-fit:cover; display:block;}
+  .gallery-item .cap{
+    position:absolute; bottom:0; left:0; right:0;
+    background:linear-gradient(to top, rgba(26,26,26,0.88), transparent);
+    padding:22px 14px 12px;
+    color:var(--off-white);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    text-align:left;
+  }
+  @media (max-width:760px){.gallery-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.gallery-grid{grid-template-columns:1fr;}}
+
+  /* ---------- SPEC / MANIFEST ---------- */
+  .specs{background:var(--charcoal); color:var(--off-white);}
+  .specs .section-head p{color:var(--steel);}
+  .spec-card{
+    border:1px solid var(--line);
+    background:var(--charcoal-2);
+    padding:8px 28px;
+  }
+  .spec-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding:16px 0;
+    border-bottom:1px dashed var(--line);
+    gap:24px;
+  }
+  .spec-row:last-child{border-bottom:none;}
+  .spec-row span:first-child{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem;
+    color:var(--steel);
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .spec-row span:last-child{
+    color:var(--off-white);
+    font-size:0.96rem;
+    text-align:right;
+  }
+
+  /* ---------- IDEAL FOR ---------- */
+  .ideal-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .ideal-card{
+    border:1px solid #e2e2df;
+    padding:26px 22px;
+  }
+  .ideal-card h3{font-size:1.02rem; margin-bottom:8px; font-family:'Inter',sans-serif; text-transform:none; font-weight:600;}
+  .ideal-card p{color:var(--steel-dark); font-size:0.9rem;}
+  @media (max-width:820px){.ideal-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.ideal-grid{grid-template-columns:1fr;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--charcoal); color:var(--off-white);}
+  .contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:start;}
+  .contact-info .eyebrow{margin-bottom:18px;}
+  .contact-info h2{font-size:clamp(1.7rem,3vw,2.2rem); margin-bottom:18px;}
+  .contact-info p{color:var(--steel); margin-bottom:26px; max-width:42ch;}
+  .contact-email{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:1.15rem;
+    color:var(--teal);
+    border-bottom:1px solid var(--teal);
+    padding-bottom:6px;
+    display:inline-block;
+    margin-bottom:30px;
+    word-break:break-all;
+  }
+  .contact-meta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.8rem;
+    color:var(--steel-dark);
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .tag-card{background:var(--charcoal-2); border:1px solid var(--line); padding:32px;}
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--steel);
+    margin-bottom:8px;
+  }
+  .field input, .field textarea{
+    width:100%;
+    background:var(--charcoal);
+    border:1px solid var(--line);
+    color:var(--off-white);
+    padding:12px 14px;
+    font-family:'Inter',sans-serif;
+    font-size:0.95rem;
+  }
+  .field input:focus, .field textarea:focus{outline:none; border-color:var(--teal);}
+  .field textarea{resize:vertical; min-height:90px;}
+  .row-2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .submit-btn{
+    width:100%; justify-content:center; cursor:pointer;
+    background:var(--teal); color:var(--charcoal); border:1px solid var(--teal);
+    font-family:'IBM Plex Mono',monospace; font-size:0.85rem;
+    letter-spacing:0.04em; text-transform:uppercase; padding:14px 24px;
+    transition:all 0.2s ease;
+  }
+  .submit-btn:hover{background:transparent; color:var(--teal);}
+  .submit-btn:disabled{opacity:0.6; cursor:not-allowed;}
+  .form-status{margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:0.85rem; line-height:1.5;}
+  .form-status:empty{margin-top:0;}
+  .form-status.success{color:var(--teal);}
+  .form-status.error{color:#ff8a6a;}
+  @media (max-width:820px){
+    .contact-grid{grid-template-columns:1fr;}
+    .row-2{grid-template-columns:1fr;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--charcoal); border-top:1px solid var(--line); padding:28px 0;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-links{display:flex; gap:22px; font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--steel-dark);}
+  .footer-links a{color:var(--steel); transition:color 0.2s;}
+  .footer-links a:hover{color:var(--teal);}
+  .footer-copy{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--steel-dark);}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="topbar-back" href="/">&larr; Tako Transport</a>
+    <span class="topbar-title">Glam Trailer Rental</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow">Mobile Glam Trailer</div>
+      <h1>Hair &amp; makeup,<br>ready <span class="accent">anywhere.</span></h1>
+      <p class="lede">A fully self-contained hair &amp; makeup trailer — backlit styling stations, a rooftop lounge deck, and its own power and climate control, so your glam squad can set up wherever the call sheet says.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#quote">Request a Quote</a>
+        <a class="btn btn-ghost" href="#gallery">See the Trailer</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What's Inside</div>
+      <h2>Built for the glam squad on the move.</h2>
+    </div>
+    <div class="features">
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M7 4v14M17 4v14"/><circle cx="12" cy="11" r="2"/></svg></div>
+        <h3>Styling Stations</h3>
+        <p>Backlit mirrors, hexagon-tile accents, and salon chairs at every station.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V10l8-6 8 6v10"/><path d="M4 14h16"/></svg></div>
+        <h3>Rooftop Lounge Deck</h3>
+        <p>A full rooftop platform with safety railing, reached by fold-down stairs.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <h3>Self-Powered</h3>
+        <p>Built-in generator and independent AC — no shore power required.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V8a1 1 0 011-1h14a1 1 0 011 1v13M4 21h16M8 21v-5h8v5"/></svg></div>
+        <h3>Pull-Out Bar &amp; Patio</h3>
+        <p>Exterior bar and retractable awning for a covered lounge space.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M9 4v5"/><circle cx="15" cy="14" r="1.5"/></svg></div>
+        <h3>Secure Storage</h3>
+        <p>Locking exterior compartment for product, tools, and supplies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Trailer</div>
+      <h2>A look inside &amp; out.</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="images/trailer-exterior-closed.jpg" alt="Glam trailer, exterior, closed and ready for transport" loading="lazy">
+        <span class="cap">Exterior — Transport Ready</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-rooftop-stairs.jpg" alt="Fold-down aluminum stairs leading to the rooftop deck" loading="lazy">
+        <span class="cap">Fold-Down Rooftop Stairs</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-rooftop-deck.jpg" alt="Rooftop lounge deck with aluminum safety railing" loading="lazy">
+        <span class="cap">Rooftop Lounge Deck</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-interior-entry.jpg" alt="View into the glam trailer interior from the entrance" loading="lazy">
+        <span class="cap">Stepping Inside</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-glam-stations-wide.jpg" alt="Full row of styling stations with backlit mirrors" loading="lazy">
+        <span class="cap">Styling Stations</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-glam-detail.jpg" alt="Close-up of backlit mirror station with purple accent lighting" loading="lazy">
+        <span class="cap">Backlit Mirror Detail</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-ac-unit.jpg" alt="Independent air conditioning unit" loading="lazy">
+        <span class="cap">Climate Control</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-hallway.jpg" alt="Rear hallway and amenities area" loading="lazy">
+        <span class="cap">Rear Amenities</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/trailer-storage-compartment.jpg" alt="Secure exterior storage compartment" loading="lazy">
+        <span class="cap">Secure Storage</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="specs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Specs</div>
+      <h2>What comes with the trailer.</h2>
+      <p>Ask us about exact station count, dimensions, and layout for your event.</p>
+    </div>
+    <div class="spec-card reveal">
+      <div class="spec-row"><span>Interior</span><span>Backlit styling stations, hexagon-tile accent wall, LED lighting</span></div>
+      <div class="spec-row"><span>Rooftop</span><span>Open lounge deck with aluminum safety railing &amp; fold-down stairs</span></div>
+      <div class="spec-row"><span>Exterior</span><span>Pull-out bar, retractable awning, covered patio skirting</span></div>
+      <div class="spec-row"><span>Power</span><span>Built-in commercial generator — fully self-contained</span></div>
+      <div class="spec-row"><span>Climate</span><span>Independent ductless AC unit</span></div>
+      <div class="spec-row"><span>Storage</span><span>Locking exterior compartment for product &amp; supplies</span></div>
+      <div class="spec-row"><span>Delivery</span><span>Transported, set up, and struck down by the Tako Transport crew</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="ideal-for">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ideal For</div>
+      <h2>Anywhere glam needs to travel.</h2>
+    </div>
+    <div class="ideal-grid">
+      <div class="ideal-card reveal"><h3>Award Shows &amp; Red Carpets</h3><p>On-site touch-ups and full glam, steps from the action.</p></div>
+      <div class="ideal-card reveal"><h3>Film &amp; TV Productions</h3><p>A dedicated hair &amp; makeup base for cast and crew.</p></div>
+      <div class="ideal-card reveal"><h3>Fashion Shows</h3><p>Multiple stations working in parallel before doors open.</p></div>
+      <div class="ideal-card reveal"><h3>Bridal Parties</h3><p>The whole party glammed up together, on location.</p></div>
+      <div class="ideal-card reveal"><h3>Festivals &amp; Activations</h3><p>A branded glam experience as part of a larger event.</p></div>
+      <div class="ideal-card reveal"><h3>Photo Shoots</h3><p>Touch-ups between setups without losing the light.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Request a Quote</div>
+      <h2>Let's talk about your event.</h2>
+      <p>Tell us the date, location, and what you need — we'll follow up with availability and full pricing.</p>
+      <a class="contact-email" href="mailto:info@takotransport.ca">info@takotransport.ca</a>
+      <div class="contact-meta">
+        <span>DELIVERY — Transport, setup &amp; strike included</span>
+        <span>COVERAGE — Local &amp; Long-Haul</span>
+      </div>
+    </div>
+
+    <form class="tag-card reveal" id="trailer-quote-form" action="https://formspree.io/f/xoeaqeaq" method="POST">
+      <input type="hidden" name="_subject" value="New Trailer Rental Inquiry — Tako Transport Website">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row-2">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="company">Company / Production</label>
+          <input type="text" id="company" name="company">
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="date">Event Date</label>
+          <input type="text" id="date" name="date" placeholder="e.g. Sept 12–14">
+        </div>
+      </div>
+      <div class="field">
+        <label for="location">Event Location</label>
+        <input type="text" id="location" name="location" placeholder="City / venue">
+      </div>
+      <div class="field">
+        <label for="details">Tell us about your event</label>
+        <textarea id="details" name="details" placeholder="Number of guests, stations needed, timing, anything else we should know" required></textarea>
+      </div>
+      <button type="submit" class="btn submit-btn" id="submit-btn">Request a Quote</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">takotransport.ca</a>
+      <a href="https://www.facebook.com/TakoTransport" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/takotransport" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:info@takotransport.ca">info@takotransport.ca</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Tako Transport. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  const form = document.getElementById('trailer-quote-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const statusEl = document.getElementById('form-status');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    statusEl.textContent = '';
+    statusEl.className = 'form-status';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        Array.from(form.children).forEach(child => {
+          if (child !== statusEl) child.style.display = 'none';
+        });
+        statusEl.classList.add('success');
+        statusEl.textContent = "Thanks — your request is on its way. We'll follow up shortly with availability and pricing.";
+        submitBtn.style.display = 'none';
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      statusEl.classList.add('error');
+      statusEl.textContent = "Something went wrong sending your request. Please try again, or email us directly at info@takotransport.ca.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Request a Quote';
+    }
+  });
+</script>
+
+</body>
+</html>
